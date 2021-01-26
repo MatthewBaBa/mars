@@ -1,4 +1,4 @@
-package com.wy.dp;
+package com.wy.interview.dp;
 
 /**
  * 给你 k 种面值的硬币，面值分别为 c1, c2 ... ck，每种硬币的数量无限，
