@@ -67,8 +67,8 @@ public class DropEggs {
                 int broken = drop-1;
                 //不碎
                 int unbroken = dp[floor-drop];
-                int conditon = Math.max(broken, unbroken) + 1;
-                dp[floor] = Math.min(dp[floor], conditon);
+                int condition = Math.max(broken, unbroken) + 1;
+                dp[floor] = Math.min(dp[floor], condition);
             }
         }
         System.out.println(Arrays.toString(dp));

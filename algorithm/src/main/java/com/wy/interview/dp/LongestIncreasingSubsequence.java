@@ -18,6 +18,7 @@ public class LongestIncreasingSubsequence {
             return 0;
         }
         int[] dp = new int[a.length];
+        int res = 0;
         for (int i = 0; i < a.length; i++) {
             dp[i] = 1;
             for (int j = 0; j < i; j++) {
@@ -25,13 +26,8 @@ public class LongestIncreasingSubsequence {
                     dp[i] = Math.max(dp[i], dp[j] + 1);
                 }
             }
+            res = Math.max(res, dp[i]);
         }
-
-        int res = 0;
-        for (int value : dp) {
-            res = Math.max(res, value);
-        }
-
         return res;
     }
 
