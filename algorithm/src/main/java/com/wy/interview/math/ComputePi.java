@@ -1,4 +1,4 @@
-package com.wy.interview;
+package com.wy.interview.math;
 
 /**
  * Monte Carlo method

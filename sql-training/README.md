@@ -26,6 +26,9 @@ id1=id2;
 
 2.求某个字段的最小值, min(column)函数
 根据某个字段的极值求另外一个活多个字段的值，开窗函数然后子查询rk=1
+聚合值求范围(大于某个数) -> group by having count > 5
+聚合值就极值(最大值，最小值) rank() over(order by count(1) desc) as rk, 然后自查询rk=1
+求极值 limit 1
 
 3.行转列 和 列转行
 行转列：分组case when
@@ -247,4 +250,17 @@ if(expr, v1, v2) 函数的意思是，如果表达式expr为true（expr<>0 and e
 select count( if( bookTyoe = ‘文学类’, id, null ) ) from table group by press
 当bookType=文学类时，会返回对应的id的值，否则放回null，对于指定列的count函数，null是被忽略的，这样就得到了我们想要的统计数量了。
 想要去掉重复的id再统计，还可以在if前面加上DISTINCT，即 count( DISTINCT if( type in (2, 3), id, null ) )
+```
+
+7.SQL的select语句完整的执行顺序
+SQL Select 语句完整的执行顺序：
+```
+1、from子句组装来自不同数据源的数据；
+2、where子句基于指定的条件对记录行进行筛选；
+3、group by子句将数据划分为多个分组；
+4、使用聚集函数进行计算；
+5、使用having子句筛选分组；
+6、计算所有的表达式；
+7、使用order by对结果集进行排序。
+8、select 集合输出。
 ```

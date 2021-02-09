@@ -1,7 +1,5 @@
 package com.wy.structure.list;
 
-import com.wy.structure.list.List;
-
 /**
  * @author matthew_wu
  * @since 2020/6/26 10:31
