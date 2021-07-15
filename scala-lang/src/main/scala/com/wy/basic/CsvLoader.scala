@@ -1,4 +1,4 @@
-package com.wy
+package com.wy.basic
 
 import scala.io.{BufferedSource, Source}
 import scala.util.{Failure, Success, Try}
@@ -48,8 +48,8 @@ object CsvLoader {
       .flatMap(identity(_))
       .toList
     val top10 = movies.sortWith((m1, m2) => {
-          m1.rating > m2.rating || (m1.rating == m2.rating && m1.running_time > m2.running_time)
-        }).take(10)
+      m1.rating > m2.rating || (m1.rating == m2.rating && m1.running_time > m2.running_time)
+    }).take(10)
     val res = top10.map(_.name).distinct
     println(res)
   }
@@ -97,6 +97,3 @@ object CsvLoader {
   }
 
 }
-
-//  隐式转换 方法  类的区别
-// () => B         => B    两者的区别
