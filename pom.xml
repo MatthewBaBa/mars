@@ -12,6 +12,7 @@
         <module>algorithm</module>
         <module>common-utils</module>
         <module>java-lang</module>
+        <module>scala-lang</module>
     </modules>
 
     <dependencies>
